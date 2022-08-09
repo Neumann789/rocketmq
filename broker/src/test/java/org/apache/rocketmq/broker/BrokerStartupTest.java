@@ -17,6 +17,7 @@
 
 package org.apache.rocketmq.broker;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Properties;
@@ -26,6 +27,13 @@ import org.junit.Test;
 public class BrokerStartupTest {
 
     private String storePathRootDir = ".";
+
+    @Test
+    public void start() throws IOException {
+        String[] args = {"-c","/Users/xmly/work/git/Neumann789/rocketmq/broker/src/test/resources/broker.conf"};
+        BrokerStartup.main(args);
+        System.in.read();
+    }
 
     @Test
     public void testProperties2SystemEnv() throws NoSuchMethodException, InvocationTargetException,

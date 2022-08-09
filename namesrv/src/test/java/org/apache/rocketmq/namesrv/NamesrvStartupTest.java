@@ -17,6 +17,7 @@
 
 package org.apache.rocketmq.namesrv;
 
+import java.io.IOException;
 import java.util.Properties;
 import org.apache.commons.cli.Options;
 import org.junit.Assert;
@@ -34,6 +35,13 @@ public class NamesrvStartupTest {
     private NamesrvController namesrvController;
     @Mock
     private Options options;
+
+    @Test
+    public void test() throws IOException {
+        String[] args = {"-c","/Users/xmly/work/git/Neumann789/rocketmq/namesrv/src/test/resources/namesrv.conf"};
+        NamesrvStartup.main(args);
+        System.in.read();
+    }
 
     @Before
     public void setUp() throws Exception {
