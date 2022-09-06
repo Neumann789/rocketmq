@@ -33,6 +33,7 @@ public class NamespaceUtil {
      *
      * @param resourceWithNamespace, topic/groupId with namespace.
      * @return topic/groupId without namespace.
+     * FHBNOTE: 返回不带namespace的资源名
      */
     public static String withoutNamespace(String resourceWithNamespace) {
         if (StringUtils.isEmpty(resourceWithNamespace) || isSystemResource(resourceWithNamespace)) {

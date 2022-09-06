@@ -36,6 +36,13 @@ public class BrokerStartupTest {
     }
 
     @Test
+    public void start2() throws IOException {
+        String[] args = {"-c","/Users/xmly/work/git/Neumann789/rocketmq/broker/src/test/resources/broker2.conf"};
+        BrokerStartup.main(args);
+        System.in.read();
+    }
+
+    @Test
     public void testProperties2SystemEnv() throws NoSuchMethodException, InvocationTargetException,
         IllegalAccessException {
         Properties properties = new Properties();

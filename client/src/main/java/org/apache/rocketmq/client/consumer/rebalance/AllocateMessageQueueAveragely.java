@@ -24,7 +24,7 @@ import org.apache.rocketmq.common.message.MessageQueue;
  * Average Hashing queue algorithm
  */
 public class AllocateMessageQueueAveragely extends AbstractAllocateMessageQueueStrategy {
-
+    // 默认采用的负载均衡算法，对所有broker的所有读的queue进行分发
     @Override
     public List<MessageQueue> allocate(String consumerGroup, String currentCID, List<MessageQueue> mqAll,
         List<String> cidAll) {
